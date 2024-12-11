@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIBA WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo1"><img src="images/TIBA.png" class="top-logo"></div>
+    <div class="donate" style="float: right;">
+        <button type="button" class="btn"><h4 id="donate"><a href="support.html" style="text-decoration: none; color: white;">DONATE</a></h4></button>
+    </div>
+</div>
+<nav class="navbar">
+
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">home</a></li>
+            <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+            <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+       </ul>
+    </div>
+    
+    
+</nav>
+</div> 
+<div style="background-color: black; padding: 20px; margin: 20px auto; width: 80%; max-width: 800px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+  <p style="font-size: 18px; font-family: 'Arial', sans-serif; color: white; line-height: 1.6; text-align: center;">
+      <strong>"Charity extinguishes sin as water extinguishes fire."</strong>
+  </p>
+  <p style="font-size: 14px; font-family: 'Arial', sans-serif; color: #555; text-align: center; margin-top: 10px;">
+      — <em>Sunan al-Tirmidhi</em> (Hadith 2616)
+  </p>
+</div>
+
+<div style="background-color: whitesmoke;">      
+      <div class="container">
+        <h1>Tiba Charity Donation</h1>
+        <form id="paymentForm">
+          <div class="form-group">
+            <label for="donorName">Your Name</label>
+            <input type="text" id="donorName" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="donationAmount">Donation Amount (UGX)</label>
+            <input type="number" id="donationAmount" placeholder="10000" required>
+          </div>
+          <div class="form-group">
+            <label for="paymentMethod">Select Payment Method</label>
+            <select id="paymentMethod" onchange="togglePaymentFields()" required>
+              <option value="" disabled selected>Choose...</option>
+              <option value="card">Credit/Debit Card</option>
+              <option value="airtelMoney">Airtel Money</option>
+              <option value="mtnMoney">MTN Mobile Money</option>
+            </select>
+          </div>
+    
+          <!-- Credit/Debit Card Fields -->
+          <div id="cardPaymentFields" class="hidden">
+            <div class="form-group">
+              <label for="nameOnCard">Name on Card</label>
+              <input type="text" id="nameOnCard" placeholder="Akram">
+            </div>
+            <div class="form-group">
+              <label for="cardNumber">Card Number</label>
+              <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="expirationDate">Expiration Date</label>
+                <input type="text" id="expirationDate" placeholder="MM/YY">
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123">
+              </div>
+            </div>
+          </div>
+    
+          <!-- Airtel Money Fields -->
+          <div id="airtelMoneyFields" class="hidden">
+            <div class="form-group">
+              <label for="airtelPhoneNumber">Airtel Phone Number</label>
+              <input type="tel" id="airtelPhoneNumber" placeholder="+256 7XX XXX XXX">
+            </div>
+          </div>
+    
+          <!-- MTN Mobile Money Fields -->
+          <div id="mtnMoneyFields" class="hidden">
+            <div class="form-group">
+              <label for="mtnPhoneNumber">MTN Phone Number</label>
+              <input type="tel" id="mtnPhoneNumber" placeholder="+256 7XX XXX XXX">
+            </div>
+          </div>
+    
+          <button type="submit" class="submit-btn">Submit Donation</button>
+        </form>
+      </div>
+      <div style="background-color: black; padding: 30px; margin: 40px; border-radius: 10px; text-align: center;box-shadow: 5px 5px 15px rgba(5, 31, 146, 0.3)">
+        <div>
+          <h2 style="color: white; text-align: center; font-size: 2rem;  font-weight: bolder;">Support Our Projects</h2>
+          <p style="color: white;">
+            "Serving Humanity with Compassion and Dedication: Our Services at Tiba Charity"
+          </p>
+          
+          </div>
+          <div class="supportinfo">
+            <p style="font-size: 14px; font-family: 'Arial', sans-serif; color: #555; text-align: center; margin-top: 10px;">
+              — <em>May Allah Be Pleased With You"</em> 
+          </p>
+            </div>
+            </div>
+      
+    </div>
+    <div style="text-align: center; padding: 10px 0; color: whitesmoke; background-color: #53AA81; height: 50px; font-size: 14px;">
+      &copy; 2024 Tiba Charity. All Rights Reserved.
+  </div>
+
+  <script>
+    function togglePaymentFields() {
+  const paymentMethod = document.getElementById("paymentMethod").value;
+
+  // Hide all fields
+  document.getElementById("cardPaymentFields").classList.add("hidden");
+  document.getElementById("airtelMoneyFields").classList.add("hidden");
+  document.getElementById("mtnMoneyFields").classList.add("hidden");
+
+  // Show relevant fields
+  if (paymentMethod === "card") {
+    document.getElementById("cardPaymentFields").classList.remove("hidden");
+  } else if (paymentMethod === "airtelMoney") {
+    document.getElementById("airtelMoneyFields").classList.remove("hidden");
+  } else if (paymentMethod === "mtnMoney") {
+    document.getElementById("mtnMoneyFields").classList.remove("hidden");
+  }
+}
+
+// Add form validation
+document.getElementById("paymentForm").addEventListener("submit", function (event) {
+  const paymentMethod = document.getElementById("paymentMethod").value;
+
+  if (!paymentMethod) {
+    alert("Please select a payment method.");
+    event.preventDefault();
+    return;
+  }
+
+  if (paymentMethod === "card") {
+    const nameOnCard = document.getElementById("nameOnCard").value.trim();
+    const cardNumber = document.getElementById("cardNumber").value.trim();
+    const expirationDate = document.getElementById("expirationDate").value.trim();
+    const cvv = document.getElementById("cvv").value.trim();
+
+    if (!nameOnCard || !cardNumber || !expirationDate || !cvv) {
+      alert("Please fill in all card details.");
+      event.preventDefault();
+    }
+  } else if (paymentMethod === "airtelMoney") {
+    const airtelPhoneNumber = document.getElementById("airtelPhoneNumber").value.trim();
+    if (!airtelPhoneNumber) {
+      alert("Please provide an Airtel phone number.");
+      event.preventDefault();
+    }
+  } else if (paymentMethod === "mtnMoney") {
+    const mtnPhoneNumber = document.getElementById("mtnPhoneNumber").value.trim();
+    if (!mtnPhoneNumber) {
+      alert("Please provide an MTN phone number.");
+      event.preventDefault();
+    }
+  }
+});
+</script>
+
+
+</body>
+</html>
+
+</body>
+</html>
