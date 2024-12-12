@@ -79,15 +79,15 @@ body{background-color: #F4F4F4;}
     font-style: italic;
     margin: 0;
 }
-.section-header h2{font-family: 'Poppins', sans-serif; /* Modern, clean font */
-    font-size: 2rem; /* Larger size to make the header stand out */
-    font-weight: 600; /* Slightly bolder for emphasis */
-    color: #00B0FF; /* Dark text for good readability */
-    text-align: left; /* Align text to the left for better flow */
-    margin-bottom: 0; /* Space below the header */
-    text-transform: capitalize; /* Make header text look neat */
-    letter-spacing: 1px; /* Slight letter spacing for clarity */
-    position: relative; /* To add decorations or effects */
+.section-header h2{font-family: 'Poppins', sans-serif; 
+    font-size: 2rem;
+    font-weight: 600;
+    color: #00B0FF; 
+    text-align: left; 
+    margin-bottom: 0; 
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    position: relative; 
     text-align: center;
 }
 .recent-projects-grid .cont{
@@ -134,10 +134,11 @@ body{margin: 0px;}
 background-image: url(images/360_F_195243450_rX0QdeORWyWLuliJaTP4gNMneBIK3DIl.webp);
 background-size: cover;
 background-position: center;
+height: 800px;
 
 
 }
-.home1{height: 350px;
+.home1{height: 750px;
 
 padding:5%;}
 .header{    
